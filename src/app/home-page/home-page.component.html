@@ -1,0 +1,13 @@
+<button [routerLink]="['/create']">Create Challenge</button>
+<div id="challengeContainer">
+    <div *ngFor="let challenge of challengeData" class="challenge">
+        <div class="header">{{challenge.title}}</div>
+        <div class="description">{{challenge.title}}</div>
+        <div class="tagsContainer">
+            <div *ngFor="let tags of challenge.tags">
+                {{tags}}
+            </div>
+            
+        </div>
+    </div>
+</div>
