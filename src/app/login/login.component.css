@@ -1,0 +1,31 @@
+.loginContainer{
+  width: 20%;
+  height: 200px;
+  justify-content: center;
+  padding-top: 0px;
+}
+h2{
+    font-size: 1.5rem;
+    color: #141b22;
+}
+.createButton{
+    padding: 0.5rem;
+}
+.userField
+{
+    padding: 12px 20px;
+  font-size: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ded8ee;
+  border-radius: 6px;
+  text-align: center;
+  outline: transparent;
+  width: 85%;
+  transition: border-color calc(var(--transition, 0.2) * 1s) ease;
+}
+h4{
+    font-size: 0.8rem;
+    color:#a0a0a0;
+    margin-top: -20px;
+}

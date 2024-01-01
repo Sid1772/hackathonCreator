@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ChallengeCreatorComponent } from './challenge-creator/challenge-creator.component';
+import { FormsModule } from '@angular/forms';
+import { OrderByPipe } from './utilities/custom-pipes/order-by.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DropdownComponent } from './utilities/custom-components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomePageComponent,
-    ChallengeCreatorComponent
+    ChallengeCreatorComponent,
+    OrderByPipe,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

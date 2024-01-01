@@ -1,0 +1,8 @@
+<div class="dropdownContainer">
+    <div (click)="toggleDropdown()" [class.closed]="!isDropdownOpen" [class.open]="isDropdownOpen" class="selector">{{selection.label}}</div>
+    <div #menu [class.hide]="!isDropdownOpen" class="menu">
+        <div class="search-dropdown-item" *ngFor="let item of data" (click)="select(item)">
+            {{item.label | titlecase}}
+          </div>
+    </div>
+</div>

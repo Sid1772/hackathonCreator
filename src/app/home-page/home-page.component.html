@@ -1,13 +1,53 @@
-<button [routerLink]="['/create']">Create Challenge</button>
+<div class="homePage">
+    <h2 style="text-align: center;">Challenges</h2>
+    <div class="creationContainer">
+        <button class="createButton" [routerLink]="['/create']">Create Challenge</button>
+    </div>
+
+<ng-container *ngIf="challengeData.length>0">
+<div  class="sorting">
+    <label for="">Sort By <button class="order" *ngIf="order=='asc'" (click)="order='desc'">
+        <fa-icon [icon]="faArrowUp"></fa-icon>
+    </button>
+    <button class="order" *ngIf="order=='desc'" (click)="order='asc'"> <fa-icon [icon]="faArrowDown"></fa-icon></button></label>
+    <app-dropdown [data]="sortByData" (newSelection)="select($event)"></app-dropdown>
+    
+    
+    
+</div>
 <div id="challengeContainer">
-    <div *ngFor="let challenge of challengeData" class="challenge">
-        <div class="header">{{challenge.title}}</div>
-        <div class="description">{{challenge.title}}</div>
+    <div *ngFor="let challenge of challengeData |orderBy:sortBy:order;let i=index" class="challenge">
         <div class="tagsContainer">
-            <div *ngFor="let tags of challenge.tags">
-                {{tags}}
+            <div class="tags" *ngFor="let tags of challenge.tags">
+                {{tags.label}}
             </div>
             
         </div>
+        <div class="header">{{challenge.title}}</div>
+        <div class="description">{{challenge.description}}</div>
+       
+        <div class="votingContainer">
+            <div class="votingCount">
+                <div class="upvote">
+                    <button [disabled]="challenge.votes.upvotes.includes(currentUser.id)" (click)="vote(i,true)"><fa-icon [class.selected]="challenge.votes.upvotes.includes(currentUser.id)" [icon]="faUp"></fa-icon></button>
+                
+                
+                {{challenge.votes.upvotes.length}}
+                </div>
+                <div class="downvote">
+                    <button  [disabled]="challenge.votes.downvotes.includes(currentUser.id)" (click)="vote(i,false)"> <fa-icon [class.selected]="challenge.votes.downvotes.includes(currentUser.id)" [icon]="faDown"></fa-icon></button>
+                   {{challenge.votes.downvotes.length}}
+                </div>
+            </div>
+           
+        </div>
+        <div class="dateContainer">
+          Created on  {{challenge.createdOn|date}} by {{challenge.createdBy}}
+        </div>
     </div>
+</div>
+</ng-container>
+<div class="noChallenge" *ngIf="challengeData.length==0">
+    <span>No challenges .Create some new Challenges</span>
+</div>
 </div>

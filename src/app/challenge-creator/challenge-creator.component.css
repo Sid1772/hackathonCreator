@@ -1,0 +1,25 @@
+.formField{
+    width: 100%;
+  border-radius: 6px;
+  border-color: gray;
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+textarea{
+    resize: none;
+    height: 100px;
+}
+.xs{
+    width: 20%;
+}
+.challenge{
+   width: 50%;
+   height: fit-content;
+}
+.tags:hover{
+    border: 2px solid white;
+}
+.tags.selected{
+    border: 2px solid;
+}

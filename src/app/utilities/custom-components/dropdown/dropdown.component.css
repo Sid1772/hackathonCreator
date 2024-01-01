@@ -1,0 +1,90 @@
+.menu{
+    width:50px;
+  overflow: auto;
+  max-height: 200px;
+  position: absolute;
+  background: white;
+  color: black;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.search-dropdown-item:hover{
+    background: #4133B7;
+    opacity: 0.8;
+    color: white;
+}
+.menu .selector{
+    padding-left: 10px;
+}
+.search{
+width: 98%;
+border: none;
+border-bottom: 1px solid #AFAFB0;
+font-size: 15px;
+}
+.search:focus{
+    outline: none;
+}
+.searchContainer{
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 50;
+}
+.selector{
+    background: white;
+    color: black;
+    cursor: pointer;
+    box-sizing: border-box;
+padding: 4px 2%;
+
+}
+
+
+  .selector:after {
+    display: block;
+    content: "▾";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 25px;
+    text-align: center;
+    height: 100%;
+    display:flex ;
+align-items: center;
+justify-content: center;
+  }
+  .selector.closed:after {
+    transform: rotate(0deg);
+   
+  }
+  .selector.open:after{
+    transform: rotate(180deg);
+  }
+.dropdownContainer{
+    position: relative;
+    margin-top: 0.5rem;
+}
+.hide{
+    height: 0px;
+}
+#button{
+    color: white;
+}
+.menu::-webkit-scrollbar{
+    width: 22px;
+    height: 22px;
+}
+
+.menu{
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    padding-bottom: 0.2rem;
+  border-radius: 10px;
+  border-bottom: 1px solid;
+    border-bottom-color: currentcolor;
+  border-color: #00000059;
+}
+  

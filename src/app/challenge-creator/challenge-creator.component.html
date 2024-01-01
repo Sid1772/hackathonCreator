@@ -1,1 +1,29 @@
-<p>challenge-creator works!</p>
+<button [routerLink]="['/home']">Back</button>
+
+    <form #challengeForm="ngForm" (ngSubmit)="createChallenge(challengeForm)">
+        <div class="creatorContainer challenge container">
+    <div class="title">
+        <input class="formField" name="title" #title="ngModel" required  [(ngModel)]="dataForm.title" type="text" placeholder="Enter Title" #ngModel>
+    </div>
+    <div class="description">
+        <textarea resi class="formField" name="description" #description="ngModel" [(ngModel)]="dataForm.description" placeholder="Describe your challeng"></textarea>
+    </div>
+    
+        <div class="tagsContainer">
+            <div (click)="addTags(tag)" [class.selected]="dataForm.tags.includes(tag)"  class="tags" *ngFor="let tag of tags">
+                {{tag.label}}
+            </div>
+            
+        </div>
+  
+       
+  
+    <div class="createdBy">
+         
+        <input class="formField xs" name="createdBy"  disabled type="text" [value]="dataForm.createdBy">
+    </div>
+    <button class="createButton" type="submit">Create Challenge !</button>
+</div>
+</form>
+
+
