@@ -11,10 +11,15 @@ import { User } from '../utilities/types/user.type';
 export class LoginComponent implements OnInit {
   
   constructor(private router:Router,private service:CommonService) { }
-
+  showError=false
   ngOnInit(): void {
   }
   handleSubmit(user:User){
+    if(user.id==undefined||!user.id){
+      this.showError=true;
+      return;
+    }
+    this.showError=false
     this.service.setCurrentUser(user)
     if(!this.service.getSavedData)this.service.setSavedData([])
     this.router.navigate(["/home"])

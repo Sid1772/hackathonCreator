@@ -1,6 +1,9 @@
 <div class="loginContainer challenge container">
     <h2>Login</h2>
     <h4>To create and see Challenges</h4>
-<input (keydown)="handleInput($event)" class="userField" #userId type="text" placeholder="Enter ID">
+   <label for="userId">Enter User Id</label> 
+<input #userId  (keydown)="handleInput($event)" class="userField" name="userId" type="text" placeholder="Enter ID">
+<span *ngIf="showError" class="error">Enter User Id</span>
 <button  class="createButton" (click)="handleSubmit({name:'',id:+userId.value})">Submit</button>
+
 </div>

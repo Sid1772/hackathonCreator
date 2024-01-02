@@ -10,7 +10,7 @@ export class OrderByPipe implements PipeTransform {
   transform(value: Array<Challenge>,sortBy?: "title"|"votes"|"createdOn",orderBy?:"asc"|"desc"): Array<Challenge> {
     let finalArray=[]
     if(sortBy=="title"){
-    finalArray=  value.sort((a,b)=>b.title.localeCompare(a.title))
+    finalArray=  value.sort((a,b)=>a.title.localeCompare(b.title))
       
       
     }
