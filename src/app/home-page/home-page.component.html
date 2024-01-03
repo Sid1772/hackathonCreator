@@ -29,13 +29,13 @@
         <div class="votingContainer">
             <div class="votingCount">
                 <div class="upvote">
-                    <button [disabled]="challenge.votes.upvotes.includes(currentUser.id)" (click)="vote(i,true)"><fa-icon [class.selected]="challenge.votes.upvotes.includes(currentUser.id)" [icon]="faUp"></fa-icon></button>
+                    <button class="upvoteButton" [disabled]="challenge.votes.upvotes.includes(currentUser.id)" (click)="vote(i,true)"><fa-icon [class.selected]="challenge.votes.upvotes.includes(currentUser.id)" [icon]="faUp"></fa-icon></button>
                 
                 
                 {{challenge.votes.upvotes.length}}
                 </div>
                 <div class="downvote">
-                    <button  [disabled]="challenge.votes.downvotes.includes(currentUser.id)" (click)="vote(i,false)"> <fa-icon [class.selected]="challenge.votes.downvotes.includes(currentUser.id)" [icon]="faDown"></fa-icon></button>
+                    <button class="downvoteButton"  [disabled]="challenge.votes.downvotes.includes(currentUser.id)" (click)="vote(i,false)"> <fa-icon [class.selected]="challenge.votes.downvotes.includes(currentUser.id)" [icon]="faDown"></fa-icon></button>
                    {{challenge.votes.downvotes.length}}
                 </div>
             </div>
