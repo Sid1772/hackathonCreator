@@ -24,3 +24,6 @@ textarea{
 .tags.selected{
     border: 2px solid;
 }
+.tagsContainer{
+    flex-wrap: wrap;
+}

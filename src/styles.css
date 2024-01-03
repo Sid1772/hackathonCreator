@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans&display=swap');
+html{
+  font-size: 16px;
+  height: 100%;
+}
+body{
+  height: 95%;
+}
+
 body{
     background: #eaeef6;
     font-family: 'Spline Sans', sans-serif;
@@ -7,7 +15,7 @@ body{
 .backBtn{
   border-radius: 6px;
   background: #8080804f;
-  width: 120px;
+  width: 3.75rem;
   padding: 0.2rem;
   cursor: pointer;
 }
@@ -22,7 +30,7 @@ body{
     cursor: pointer;
   }
   .challenge {
-    height: 200px;
+    height: 12.5rem;
     display: flex;
     flex-direction: column;
     border-radius: 16px;
@@ -40,8 +48,8 @@ body{
   transform: translate(-50%,-50%);}
   .tagsContainer {
     display: flex;
-    gap: 10px;
-    font-size: 12px;
+    gap: 0.6125rem;
+    font-size: 0.75rem;
   }
   .tags{
     display: inline-block;

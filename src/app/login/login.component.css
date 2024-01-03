@@ -1,8 +1,19 @@
 .loginContainer{
   width: 20%;
-  height: 200px;
+  height: 12.5rem;
   justify-content: center;
   padding-top: 0px;
+  min-width: fit-content;
+  position: relative;
+  transform: none;
+  top: 0;
+  left: 0;
+}
+.loginPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 h2{
     font-size: 1.5rem;
@@ -13,7 +24,7 @@ h2{
 }
 .userField
 {
-    padding: 12px 20px;
+    padding: 0.75rem 1.25rem;
   font-size: 1rem;
   border-width: 2px;
   border-style: solid;
@@ -27,5 +38,5 @@ h2{
 h4{
     font-size: 0.8rem;
     color:#a0a0a0;
-    margin-top: -20px;
+    margin-top: -0.625rem;
 }

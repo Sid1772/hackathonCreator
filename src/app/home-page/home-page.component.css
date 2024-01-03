@@ -49,6 +49,7 @@
   width: 100%;
 }
 .createButton{
+  min-width: fit-content;
   background-color: #4133B7;
   width: 20%;
   color: white;
@@ -69,17 +70,24 @@
   .selected{
     color: blue;
   }
+ 
   
   #challengeContainer {
     margin: 2rem auto;
     display: grid;
     gap: 10px;
     align-self: center;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     width: 90%;
   }
+  @media only screen and (max-width:450px) {
+    #challengeContainer {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
+    
+ }
   
-  .challenge {
+  /* .challenge {
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -88,7 +96,7 @@
   background-color: white;
   padding: 1.5rem;
   position: relative;
-  }
+  } */
   
   .header {
     font-size: 1.5rem;

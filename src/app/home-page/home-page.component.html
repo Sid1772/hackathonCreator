@@ -7,7 +7,7 @@
 
 <ng-container *ngIf="challengeData.length>0">
 <div  class="sorting">
-    <label for="">Sort By <button class="order" *ngIf="order=='asc'" (click)="order='desc'">
+    <label style="white-space:nowrap;" for="">Sort By <button class="order" *ngIf="order=='asc'" (click)="order='desc'">
         <fa-icon [icon]="faArrowUp"></fa-icon>
     </button>
     <button class="order" *ngIf="order=='desc'" (click)="order='asc'"> <fa-icon [icon]="faArrowDown"></fa-icon></button></label>

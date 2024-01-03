@@ -10,6 +10,7 @@
   padding-left: 10px;
   cursor: pointer;
 }
+
 .search-dropdown-item:hover{
     background: #4133B7;
     opacity: 0.8;
@@ -39,6 +40,7 @@ font-size: 15px;
     cursor: pointer;
     box-sizing: border-box;
 padding: 4px 2%;
+white-space: nowrap;
 
 }
 
@@ -86,5 +88,13 @@ justify-content: center;
   border-bottom: 1px solid;
     border-bottom-color: currentcolor;
   border-color: #00000059;
+}
+@media only screen and (max-width:510px) {
+  .selector:after{
+    content: none;
+  }
+  *{
+    font-size: 0..625rem;
+  }
 }
   
