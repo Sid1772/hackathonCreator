@@ -4,6 +4,13 @@ body{
     background: #eaeef6;
     font-family: 'Spline Sans', sans-serif;
 }
+.backBtn{
+  border-radius: 6px;
+  background: #8080804f;
+  width: 120px;
+  padding: 0.2rem;
+  cursor: pointer;
+}
 .createButton{
     background-color: #4133B7;
     color: white;

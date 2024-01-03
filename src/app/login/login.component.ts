@@ -21,8 +21,7 @@ export class LoginComponent implements OnInit {
     }
     this.showError=false
     this.service.setCurrentUser(user)
-    if(!this.service.getSavedData)this.service.setSavedData([])
-    this.router.navigate(["/home"])
+    
   }
   handleInput(ev:any){
     let symbol = String.fromCharCode(ev.keyCode);

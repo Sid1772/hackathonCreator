@@ -1,11 +1,12 @@
 .formField{
-    width: 100%;
+    width: 97%;
   border-radius: 6px;
   border-color: gray;
   padding: 0.2rem 0.5rem;
   font-size: 1rem;
   outline: none;
 }
+.back{margin: 0 5rem;}
 textarea{
     resize: none;
     height: 100px;

@@ -3,14 +3,19 @@ import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testin
 import { HomePageComponent } from './home-page.component';
 import { OrderByPipe } from '../utilities/custom-pipes/order-by.pipe';
 import { OrderByPipeMock } from '../utilities/custom-pipes/order-by-pipe.-mock';
+import { RouterTestingModule } from '@angular/router/testing';
+import { LoginComponent } from '../login/login.component';
+import { Router } from '@angular/router';
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
   let fixture: ComponentFixture<HomePageComponent>;
+  let router:Router
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomePageComponent,OrderByPipe ]
+      declarations: [ HomePageComponent,OrderByPipe ],
+      imports:[RouterTestingModule.withRoutes([{path:"login",component:LoginComponent},{path:"home",component:HomePageComponent}])]
     })
     .compileComponents();
     
@@ -19,6 +24,7 @@ describe('HomePageComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;
+    router=TestBed.inject(Router)
     fixture.detectChanges();
     let transform=jest.spyOn(OrderByPipe.prototype,"transform")
     transform.mockReturnValue([

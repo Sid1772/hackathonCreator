@@ -5,6 +5,15 @@
     display: flex;
     flex-direction: column;
   }
+  .noChallenge{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10rem;
+  }
+  .noChallenge span{
+    display: block;
+    margin-bottom: 1rem;
+  }
   .sorting{
     width: 20%;
     align-self: flex-end;
@@ -29,11 +38,19 @@
     background: transparent;
     border: none;
   }
+  .logout{
+    margin: 0 5rem;
+  }
 
 /* Inline #7 | http://localhost:4200/home */
-
+.creationContainer{
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
 .createButton{
   background-color: #4133B7;
+  width: 20%;
   color: white;
   font-weight: 500;
   font-size: 1.125rem;

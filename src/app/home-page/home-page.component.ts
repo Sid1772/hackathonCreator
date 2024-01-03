@@ -36,6 +36,9 @@ export class HomePageComponent implements OnInit {
     console.log(challengeData)
     this.challengeData=challengeData
   }
+  logout(){
+    this.service.endSession()
+  }
   select(item:any){
     this.sortBy=item.value
     this.sortBylabel=item.label

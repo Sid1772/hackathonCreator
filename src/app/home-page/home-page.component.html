@@ -1,8 +1,9 @@
+<div class="logout">
+    <button class="backBtn" (click)="logout()">Logout</button>
+ </div>
 <div class="homePage">
     <h2 style="text-align: center;">Challenges</h2>
-    <div class="creationContainer">
-        <button class="createButton" [routerLink]="['/create']">Create Challenge</button>
-    </div>
+    
 
 <ng-container *ngIf="challengeData.length>0">
 <div  class="sorting">
@@ -48,6 +49,13 @@
 </div>
 </ng-container>
 <div class="noChallenge" *ngIf="challengeData.length==0">
-    <span>No challenges .Create some new Challenges</span>
+    <span>
+        No challenges Found .Create some new Challenges
+        
+    </span>
+    <button class="createButton" [routerLink]="['/create']">Create Challenge</button>
+</div>
+<div *ngIf="challengeData.length!=0" class="creationContainer">
+    <button class="createButton" [routerLink]="['/create']">Create Challenge</button>
 </div>
 </div>

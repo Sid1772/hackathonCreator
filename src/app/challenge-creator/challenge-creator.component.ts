@@ -46,7 +46,7 @@ export class ChallengeCreatorComponent implements OnInit {
     console.log(this.dataForm)
     this.dataForm.createdOn=new Date()
     this.service.setSavedData(this.dataForm)
-    this.router.navigate(['/home'])
+   
 
   }
 

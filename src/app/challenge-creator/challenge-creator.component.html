@@ -1,4 +1,7 @@
-<button [routerLink]="['/home']">Back</button>
+<div class="back">
+    <button class="backBtn" [routerLink]="['/home']">Back</button>
+</div>
+
 
     <form #challengeForm="ngForm" (ngSubmit)="createChallenge(challengeForm)">
         <div class="creatorContainer challenge container">
